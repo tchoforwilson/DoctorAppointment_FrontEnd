@@ -1,3 +1,4 @@
+
 .searchBox{
     padding: 6px 12px;
     background-color: #fff;
@@ -17,7 +18,7 @@
 
 /*1. TABLE HEADER**/
 
-div.header {
+/* div.header {
     background-color: #fff;
     padding: 4px 10px;
     border-radius: 5px;
@@ -39,14 +40,15 @@ div.header div:first-child {
 .fa-arrow {
     font-size: 10px;
     opacity: 50%;
-}
+} */
 
 /*1. TABLE BODY**/
-tbody tr.table-row {
+/* tbody tr.table-row {
     background-color: #fff;
     padding: 2px 6px;
     border-radius: 10px;
-}
+    margin: 20px 0px;
+} */
 
 tbody tr.table-row td {
     text-align: left;

@@ -1,8 +1,9 @@
-.content {
-  border-top: 5px solid grey;
-  border-left: 5px solid grey;
+main {
+  border-top: 5px solid rgba(128, 128, 128, 0.562);
+  border-left: 5px solid rgb(128, 128, 128, 0.562);;
   background-color:beige;
-  height: 98vh;
+  overflow-x: hidden;
+  /*height: 98vh;*/
 }
 
 .navbar {
@@ -11,7 +12,7 @@
 }
 
 .navbar-brand {
-  background-color: #00f100;
+  background-color: #0b9779e0;
   height: 100%;
   padding: 24px 14px;
   border-bottom-right-radius: 40px;
@@ -27,8 +28,25 @@
   margin: 40px;
 }
 
-.form-content {}
-
 input:focus {
   outline: none;
+}
+
+/****************************/
+/******REUSABLE STYLES******/
+/**************************/
+section{
+    margin-bottom: 20px;
+}
+
+button{
+  background-color: #c82333;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 5px 10px;
+  box-shadow: 0 0 2 #00000030;
+  float: right;
+  border-radius: 10px;
+  border: 1px solid #c823338b;
 }

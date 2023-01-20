@@ -7,7 +7,7 @@ import React from "react";
  */
 const NavBar = ({ title, name, brandWidth }) => {
   return (
-    <nav className="navbar navbar-expand-sm bg-dark navbar-dark ms-1 p-0">
+    <nav className="navbar navbar-expand-sm bg-dark navbar-dark p-0">
       <div className="navbar-brand" style={{width: `${brandWidth}%`}}>
         <span>{title}</span>
         <span className="line"></span>

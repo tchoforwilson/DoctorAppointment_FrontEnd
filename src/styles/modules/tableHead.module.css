@@ -1,0 +1,18 @@
+
+  .column {
+    padding: '2px';
+  }
+  .header-container {
+    background-color: '#fff';
+    padding: '4px 10px';
+    border-radius: '5px';
+  }
+  .header-icon {
+    font-size: '12px';
+    opacity: '50%';
+  }
+  .header-thead{
+    border-top: '0px';
+    border-bottom: '0px';
+    padding: '2px',
+  }
