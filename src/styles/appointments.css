@@ -1,54 +1,28 @@
+div#heading-title::after {
+    display: block;
+    height: 1.5px;
+    background-color: #dc3545;
+    content: "";
+    width: 40px;
+    margin: 0 auto;
+    margin-top: 1px;
+}
 
-.searchBox{
+.searchBox {
     padding: 6px 12px;
     background-color: #fff;
     border-radius: 10px;
 }
+
 .searchBox input {
     border: 0px;
     text-decoration: underline;
 }
 
-.searchBox .fa{
+.searchBox .fa {
     color: #f00;
 }
-/************************************/
-/***********TABLE STYLE*************/
-/**********************************/
 
-/*1. TABLE HEADER**/
-
-/* div.header {
-    background-color: #fff;
-    padding: 4px 10px;
-    border-radius: 5px;
-}
-
-div.header div:first-child {
-    font-size: smaller;
-}
-
-.table thead th {
-    border-bottom: 0px;
-}
-
-.table td,
-.table th {
-    padding: 2px;
-}
-
-.fa-arrow {
-    font-size: 10px;
-    opacity: 50%;
-} */
-
-/*1. TABLE BODY**/
-/* tbody tr.table-row {
-    background-color: #fff;
-    padding: 2px 6px;
-    border-radius: 10px;
-    margin: 20px 0px;
-} */
 
 tbody tr.table-row td {
     text-align: left;
@@ -61,15 +35,16 @@ tbody tr.table-row td span.status {
 /***********************/
 /***** CELL STYLE *****/
 /*********************/
-tbody tr td.table-column{
+tbody tr td.table-column {
     padding: 4px 10px;
 }
-tbody tr td span.status{
+
+tbody tr td span.status {
     border-radius: 8px;
     padding: 4px 8px;
 }
 
-tbody tr td span.passed{
+tbody tr td span.passed {
     color: rgb(1, 24, 1);
     background-color: rgba(47, 110, 47, 0.315);
 }
