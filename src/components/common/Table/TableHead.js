@@ -1,25 +1,33 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import { SortContext } from '../../../config/Context';
 
-const TableHead = ({ label, isFilterIcon = false }) => {
+const TableHead = ({ label, path, icon = false }) => {
+  const { setSortColumn } = useContext(SortContext);
+
   return (
     <th style={headerStyle.thead}>
-      <div
-        style={headerStyle.container}
-        className="d-flex justify-content-between container"
-      >
-        <div className="align-self-center font-weight-bold">{label}</div>
+      <div className="d-flex justify-content-between container">
         <div>
-          {isFilterIcon && <span className="fa fa-filter"></span>}
-          <div className="d-flex flex-column align-items-end">
-            <span
-              style={headerStyle.icon}
-              className="fa fa-chevron-up fa-arrow"
-            ></span>
-            <span
-              style={headerStyle.icon}
-              className="fa fa-chevron-down fa-arrow"
-            ></span>
+          <span className="align-self-center font-weight-bold">{label}</span>
+        </div>
+        <div>
+          <div className="d-flex">
+            <div className="mx-1">
+              {icon && <span className="fa fa-filter"></span>}
+            </div>
+            <div className="d-flex flex-column align-items-end">
+              <span
+                onClick={() => setSortColumn(path)}
+                style={headerStyle.icon}
+                className="fa fa-chevron-up fa-arrow"
+              ></span>
+              <span
+                onClick={() => setSortColumn(`-${path}`)}
+                style={headerStyle.icon}
+                className="fa fa-chevron-down fa-arrow"
+              ></span>
+            </div>
           </div>
         </div>
       </div>

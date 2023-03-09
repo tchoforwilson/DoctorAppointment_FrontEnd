@@ -12,6 +12,7 @@ const TableHeader = () => {
         {columns.map((column) => (
           <TableHead
             key={column.path}
+            path={column.path}
             label={column.label}
             icon={column?.icon}
           />

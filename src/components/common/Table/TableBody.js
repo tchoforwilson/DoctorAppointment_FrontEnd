@@ -7,12 +7,12 @@ const TableBody = () => {
   const columns = useContext(ColumnContext);
   const data = useContext(DataContext);
 
-  const createKey = (item, column) => item.id + column.path;
+  const createKey = (item, column) => item._id + column.path;
 
   return (
     <tbody>
       {data.map((item) => (
-        <tr key={item.id} className="table-row">
+        <tr key={item._id} className="table-row">
           {columns.map((column) => (
             <RowColumn
               key={createKey(item, column)}
