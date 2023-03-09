@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { API_URL } from '../../config/AppPath';
 import * as actions from '../apiCall';
 
 const apiRequest =
@@ -14,18 +15,17 @@ const apiRequest =
 
     try {
       const response = await axios.request({
-        baseURL: 'http://localhost:9000/api/hospital',
+        baseURL: API_URL,
         url,
         method,
         data,
       });
       dispatch(actions.apiCallSuccess(response.data));
-
       if (onSuccess) dispatch({ type: onSuccess, payload: response.data });
     } catch (error) {
-      dispatch(actions.apiCallFailed(error.message));
-
-      if (onError) dispatch({ type: onError, payload: error.message });
+      const { data } = error.response;
+      dispatch(actions.apiCallFailed(data.message));
+      if (onError) dispatch({ type: onError, payload: data.message });
     }
   };
 
